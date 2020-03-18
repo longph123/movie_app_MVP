@@ -1,0 +1,106 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:2146738087747959400",
+      "lastPropertyId": "5:4383090249056138727",
+      "name": "MovieDetail",
+      "properties": [
+        {
+          "id": "1:8505919983062777754",
+          "name": "id"
+        },
+        {
+          "id": "2:9121204386414056366",
+          "name": "original_title"
+        },
+        {
+          "id": "3:7168561350906938095",
+          "name": "overview"
+        },
+        {
+          "id": "4:1758596823521493479",
+          "name": "poster_path"
+        },
+        {
+          "id": "5:4383090249056138727",
+          "name": "vote_average"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:6386681225606396589",
+      "lastPropertyId": "13:1948223390751733258",
+      "name": "Movie",
+      "properties": [
+        {
+          "id": "1:5116110954020576141",
+          "name": "id"
+        },
+        {
+          "id": "2:5974788630477148796",
+          "name": "vote_count"
+        },
+        {
+          "id": "3:5820064347482994049",
+          "name": "video"
+        },
+        {
+          "id": "4:8654090269797009272",
+          "name": "vote_average"
+        },
+        {
+          "id": "5:6577836045208555943",
+          "name": "title"
+        },
+        {
+          "id": "6:1748130783171001366",
+          "name": "popularity"
+        },
+        {
+          "id": "7:7758493047048480516",
+          "name": "poster_path"
+        },
+        {
+          "id": "8:8573171652455681894",
+          "name": "original_language"
+        },
+        {
+          "id": "9:5954784330973481870",
+          "name": "original_title"
+        },
+        {
+          "id": "10:1603228174169857509",
+          "name": "backdrop_path"
+        },
+        {
+          "id": "11:7626701903482524022",
+          "name": "adult"
+        },
+        {
+          "id": "12:5380832045223911502",
+          "name": "overview"
+        },
+        {
+          "id": "13:1948223390751733258",
+          "name": "release_date"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "2:6386681225606396589",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 4,
+  "modelVersionParserMinimum": 4,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}

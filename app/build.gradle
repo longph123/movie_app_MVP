@@ -1,0 +1,104 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-allopen'
+apply plugin: 'io.objectbox'
+
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.longph.movieapp"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+kapt {
+    mapDiagnosticLocations = true
+}
+
+allOpen {
+    annotation("org.androidannotations.api.KotlinOpen")
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    implementation dependency.multidex
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation("com.android.support.test.espresso:espresso-contrib:3.0.2") {
+        exclude group: 'com.android.support', module: 'appcompat'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: 'com.android.support', module: 'support-v7'
+        exclude group: 'com.android.support', module: 'design'
+        exclude module: 'support-annotations'
+        exclude module: 'recyclerview-v7'
+    }
+
+    //Mosby
+    implementation dependency.mosby
+
+    //Android Annotation
+    //kapt dependency.androidAnnotation
+    implementation dependency.androidAnnotation
+    annotationProcessor dependency.androidAnnotationCompiler
+
+    //retrofit
+    implementation dependency.retrofit
+    implementation dependency.retrofitConverterGson
+    implementation dependency.retrofitAdapterRxJava
+
+    //logging
+    implementation dependency.okhttpHttpLogging
+
+    //rx
+    implementation dependency.rxAndroid
+    implementation dependency.rxJava
+
+    //gson
+    implementation dependency.gson
+
+    //EventBus
+    implementation dependency.eventBus
+
+    //dependency injection
+    implementation dependency.dagger
+    implementation dependency.daggerAndroidSupport
+    kapt dependency.daggerCompiler
+    //kapt dependency.daggerAndroidProcessor
+    //annotationProcessor dependency.daggerCompiler
+    annotationProcessor dependency.daggerAndroidProcessor
+
+    //recycle view
+    implementation dependency.recyclerviewv7
+
+    //card view
+    implementation dependency.cardviewv7
+
+    //glide
+    implementation dependency.glide
+
+    //calligraphy
+    implementation dependency.calligraphy
+}
