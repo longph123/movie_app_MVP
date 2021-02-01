@@ -16,7 +16,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-A demo Android application that getting JSON responses from The Movie DB APIs and presenting as a movie galleries, with features to showing grid-list movies that sorted by published date with ascending order, then when user touch on any movie, that'll see the details of movie (movie's name, published date, length, vote rate, description, poster, etc. Applied with MVP (Model - View - Controller) design pattern.
+A demo Android application that getting JSON responses from The Movie DB APIs and presenting as a movie galleries, with features to showing grid-list movies that sorted by published date with ascending order, then when user touch on any movie, that'll see the details of movie (movie's name, published date, length, vote rate, description, poster, etc. Applied with MVP (Model - View - Presenter) design pattern.
 
 ### Built With
 
